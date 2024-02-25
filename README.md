@@ -38,3 +38,9 @@ npm run dev // if it's first time, run first 'npm run build'
 
 ## Backend
 It uses Infura API in order to get logs data and interact with Frontend
+
+### Run in local
+```
+cd server
+npm run dev
+```
