@@ -1,0 +1,36 @@
+{
+  "name": "lending-borrowing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deployLineaTest": "npx hardhat run --network linea_testnet scripts/deploy.ts",
+    "deployLocal": "npx hardhat run --network localhost scripts/deploy.ts",
+    "connectLineaTest": "npx hardhat console --network linea_testnet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taewa/lending-borrowing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taewa/lending-borrowing/issues"
+  },
+  "homepage": "https://github.com/Taewa/lending-borrowing#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/chai": "^4.3.12",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.20",
+    "chai": "^4.4.1",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.20.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
