@@ -95,7 +95,7 @@ export default function Home() {
   } 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-r from-indigo-950 via-60% to-emerald-900 to-90%">
       <section className="w-full max-w-2xl overflow-hidden">
         {
           Object.entries(depositList).map((item: any, index: number) => {
@@ -121,8 +121,8 @@ export default function Home() {
         }
       </section>
 
-      <section className='mb-4'>
-        <div id='donationBlock' className='flex rounded-md overflow-hidden'>
+      <section className='sticky bottom-2 mb-4'>
+        <div id='donationBlock' className='flex rounded-md p-2 overflow-hidden bg-gradient-to-r from-indigo-700 via-60% to-emerald-700 to-90% shadow-lg'>
           <input 
             type="text" 
             value={nftTokenId}
@@ -132,7 +132,7 @@ export default function Home() {
           
           <button 
             id='lendNftButton' 
-            className='p-6 bg-teal-700 disabled:bg-gray-700 disabled:cursor-not-allowed'
+            className='p-6 bg-zinc-700 hover:bg-zinc-900 disabled:bg-gray-700 disabled:cursor-not-allowed'
             disabled={!connectedAccount}
             onClick={_ => {sendNft(nftTokenId)}}>
             Lend my NFT
