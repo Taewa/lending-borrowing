@@ -28,10 +28,20 @@ router.get('/get-deposit-list', async (req, res, next) => {
         return [item.topics[1], item.data]
       });
 
-      // to add another address for demo
+      // adding more addresses for demo
       addressAndNft.push([
         '0x000000000000000000000000fa99d3ab33ed6e7ceebb051de33dd24ec72839c4',
         '0x0000000000000000000000000000000000000000000000000000000000000yyy'
+      ],)
+
+      addressAndNft.push([
+        '0x000000000000000000000000cc99d3ab33ed6e7ceebb051de33dd24ec728abcd',
+        '0x000000000000000000000000000000000000000000000000000000000000zzzz'
+      ],)
+
+      addressAndNft.push([
+        '0x000000000000000000000000789ad3ab33ed6e7ceebb051de33dd24ec728cdef',
+        '0x000000000000000000000000000000000000000000000000000000000000abcd'
       ],)
 
       const nftTokenIdsByAddress = addressAndNft.reduce((acc: any, cur: any) => {
