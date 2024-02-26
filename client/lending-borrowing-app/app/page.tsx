@@ -61,12 +61,6 @@ export default function Home() {
 
     const response = await fetch(`http://localhost:7777/trade/get-deposit-list`, {
       method: 'GET',
-      headers: {
-        'Access-Control-Allow-Credentials': 'true',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
-        'Access-Control-Allow-Headers': 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
-      },
     });
 
     const res = await response.json();
