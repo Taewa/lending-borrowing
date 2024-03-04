@@ -14,7 +14,7 @@ export default function Home() {
   const lendingBorrowingContractAddress: string = '0x43Fe125d1b742C07bf25008122A0ba8B1A5C1E87'; // Linea testnet
   const [ethereum, setEthereum] = useState<Window['ethereum']>(undefined);
   const [connectedAccount, setConnectedAccount] = useState<string>('');    // connected wallet account
-  const [lendingBorrowingContract, setlLendingBorrowingContract] = useState<ethers.Contract>();
+  const [lendingBorrowingContract, setLendingBorrowingContract] = useState<ethers.Contract>();
   const [nftTokenId, setNftTokenId] = useState<number | string>('0x');
   const [depositList, setDepositList] = useState<any>({});
   const nftPrice = 1000 //NOTE: To simplify the logic, fix price as 1000 USDC per nft
@@ -38,7 +38,7 @@ export default function Home() {
   }, [lendingBorrowingContract]);
 
   const init = () => {
-    setEthereum(window.ethereum);
+    setEthereum(window.ethereum); // injected my MetaMask
   }
 
   const handleAccounts = async () => {
@@ -74,7 +74,7 @@ export default function Home() {
       const signer = await provider.getSigner();
       const lendingBorrowingContract: ethers.Contract = new ethers.Contract(lendingBorrowingContractAddress as string, LendingBorrowingArtifact.abi, signer);
 
-      setlLendingBorrowingContract(lendingBorrowingContract);
+      setLendingBorrowingContract(lendingBorrowingContract);
     }
   }
 
